@@ -1,0 +1,18 @@
+/* Write your CSS here */
+.bg-cont {
+  background-color: #161625;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-cont {
+  background-color: blueviolet;
+  height: 100vh;
+  background-size: cover;
+}
+.headstyle {
+  color: white;
+}

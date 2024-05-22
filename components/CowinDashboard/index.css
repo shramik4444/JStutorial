@@ -8,11 +8,20 @@
   justify-content: center;
   align-items: center;
 }
-.card-cont {
-  background-color: blueviolet;
-  height: 100vh;
-  background-size: cover;
-}
+
 .headstyle {
   color: white;
 }
+
+.imgstyle {
+  height: 70px;
+  width: 70px;
+}
+
+.imgcont{
+  display: flex;
+  align-self: flex-start;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+

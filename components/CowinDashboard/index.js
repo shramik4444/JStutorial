@@ -20,10 +20,7 @@ class CowinDashboard extends Component {
       body: JSON.stringify(),
     }
     const vaccinationDataApiUrl = 'https://apis.ccbp.in/covid-vaccination-data'
-    const response = await fetch(
-      vaccinationDataApiUrl,
-      options
-    )
+    const response = await fetch(vaccinationDataApiUrl, options)
     const data = await response.json()
     console.log(data)
     this.setState({bygender: data.vaccination_by_gender})
@@ -35,17 +32,19 @@ class CowinDashboard extends Component {
     const {bygender, byage, coverage} = this.state
     return (
       <div className="bg-cont">
+      <div className="imgcont">
         <img
           src="https://assets.ccbp.in/frontend/react-js/cowin-logo.png"
           alt="website logo"
+          className="imgstyle"
         />
         <h1 className="headstyle">co-WIN</h1>
+        </div>
         <h1 className="headstyle">CoWIN Vaccination in India</h1>
+
         <VaccinationCoverage coveragedetails={coverage} />
-        <h1 className="headstyle">Vaccination by gender</h1>
-        {<VaccinationByGender genderdetails={bygender} />}
-        <h1 className="headstyle">Vaccination by Age</h1>
-        {<VaccinationByAge details={byage} />}
+        <VaccinationByGender genderdetails={bygender} />
+        <VaccinationByAge details={byage} />
       </div>
     )
   }
